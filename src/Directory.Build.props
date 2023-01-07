@@ -1,0 +1,31 @@
+<Project>
+    <PropertyGroup>
+        <Authors>Roland König</Authors>
+        <Company>Roland König</Company>
+        <Description>A .NET Standard for reading and writing GPX (GPS Exchange Format) files</Description>
+        <Copyright>©2023 by Roland König</Copyright>
+        <PackageProjectUrl>https://github.com/RolandKoenig/RolandK.Formats.Gpx</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/RolandKoenig/RolandK.Formats.Gpx</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Version>1.0.0</Version>
+        <PackageVersion>1.0.0</PackageVersion>
+        <Product>RolandK.Formats.Gpx</Product>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageReleaseNotes>
+        https://github.com/RolandKoenig/RolandK.Formats.Gpx/releases
+    </PackageReleaseNotes>
+        <LangVersion>10.0</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <!-- Treat warnings as erros -->
+    <PropertyGroup>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <WarningsAsErrors />
+        <NoWarn>1701,1702,1591</NoWarn>
+    </PropertyGroup>
+</Project>
