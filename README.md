@@ -4,6 +4,9 @@ A .NET Standard for reading and writing GPX (GPS Exchange Format) files.
 This library was build for my [GpxViewer](https://github.com/RolandKoenig/GpxViewer) project. It is based
 on the System.Xml.Serialization.XmlSerializer class and therefore available for .NET Framework and .NET Core projects.
 
+### Build
+ - [![Continuous integration](https://github.com/RolandKoenig/RolandK.Formats.Gpx/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/RolandKoenig/RolandK.Formats.Gpx/actions/workflows/continuous-integration.yml)
+
 ### Feature overview
  - Full document model for gpx files
  - Load gpx files
