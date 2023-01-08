@@ -22,7 +22,6 @@
     </PropertyGroup>
 
     <!-- Package logo -->
-    <!-- Package icon -->
     <PropertyGroup>
         <PackageIcon>Logo_128.png</PackageIcon>
     </PropertyGroup>
