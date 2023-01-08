@@ -45,31 +45,6 @@ public class GpxFile
         s_cachedSerializer = new ConcurrentDictionary<GpxVersion, XmlSerializer>();
     }
 
-    public GpxTrack CreateAndAddDummyTrack(string name, params GpxWaypoint[] waypoints)
-    {
-        var gpxTrack = new GpxTrack();
-        gpxTrack.Name = name;
-        this.Tracks.Add(gpxTrack);
-
-        var gpxTrackSegment = new GpxTrackSegment();
-        gpxTrack.Segments.Add(gpxTrackSegment);
-
-        gpxTrackSegment.Points.AddRange(waypoints);
-
-        return gpxTrack;
-    }
-
-    public GpxRoute CreateAndAddDummyRoute(string name, params GpxWaypoint[] waypoints)
-    {
-        var gpxRoute = new GpxRoute();
-        gpxRoute.Name = name;
-        this.Routes.Add(gpxRoute);
-
-        gpxRoute.RoutePoints.AddRange(waypoints);
-
-        return gpxRoute;
-    }
-
     public void EnsureNamespaceDeclarations()
     {
         if(s_extensionNamespaces != null)
@@ -226,7 +201,7 @@ public class GpxFile
         return fileToSave;
     }
 
-    public static GpxFile Load(TextReader textReader, GpxFileDeserializationMethod method)
+    public static GpxFile Load(TextReader textReader, GpxFileDeserializationMethod method = GpxFileDeserializationMethod.Compatibility)
     {
         switch (method)
         {
@@ -320,28 +295,28 @@ public class GpxFile
         }
     }
 
-    public static GpxFile Load(Stream stream, GpxFileDeserializationMethod method)
+    public static GpxFile Load(Stream stream, GpxFileDeserializationMethod method = GpxFileDeserializationMethod.Compatibility)
     {
         using var streamReader = new StreamReader(stream);
 
         return Load(streamReader, method);
     }
 
-    public static async Task<GpxFile> LoadAsync(Stream stream, GpxFileDeserializationMethod method)
+    public static async Task<GpxFile> LoadAsync(Stream stream, GpxFileDeserializationMethod method = GpxFileDeserializationMethod.Compatibility)
     {
         using var streamReader = new StreamReader(stream);
 
         return await LoadAsync(streamReader, method);
     }
 
-    public static GpxFile Load(string sourceFile, GpxFileDeserializationMethod method)
+    public static GpxFile Load(string sourceFile, GpxFileDeserializationMethod method = GpxFileDeserializationMethod.Compatibility)
     {
         using var fileStream = File.OpenRead(sourceFile);
 
         return Load(fileStream, method);
     }
 
-    public static async Task<GpxFile> LoadAsync(string sourceFile, GpxFileDeserializationMethod method)
+    public static async Task<GpxFile> LoadAsync(string sourceFile, GpxFileDeserializationMethod method = GpxFileDeserializationMethod.Compatibility)
     {
         using var fileStream = File.OpenRead(sourceFile);
 
