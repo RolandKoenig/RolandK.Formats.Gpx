@@ -10,7 +10,7 @@
     <PropertyGroup>
         <Authors>Roland König</Authors>
         <Company>Roland König</Company>
-        <Description>A .NET Standard for reading and writing GPX (GPS Exchange Format) files</Description>
+        <Description>A .NET Standard library for reading and writing GPX (GPS Exchange Format) files</Description>
         <Copyright>©2023 by Roland König</Copyright>
         <PackageProjectUrl>https://github.com/RolandKoenig/RolandK.Formats.Gpx</PackageProjectUrl>
         <RepositoryUrl>https://github.com/RolandKoenig/RolandK.Formats.Gpx</RepositoryUrl>
