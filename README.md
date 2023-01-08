@@ -1,4 +1,4 @@
-# RolandK.Formats.Gpx <img src="assets/Logo.svg" width="32" />
+# RolandK.Formats.Gpx <img src="assets/Logo_128.png" width="32" />
 ### Common Information
 A .NET Standard library for reading and writing GPX (GPS Exchange Format) files.
 This library was build for my [GpxViewer](https://github.com/RolandKoenig/GpxViewer) project. It is based
