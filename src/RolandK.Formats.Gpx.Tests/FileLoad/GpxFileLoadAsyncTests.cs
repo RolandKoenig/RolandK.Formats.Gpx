@@ -4,17 +4,17 @@ using System.Text;
 namespace RolandK.Formats.Gpx.Tests.FileLoad;
 
 [SuppressMessage("ReSharper", "RedundantArgumentDefaultValue")]
-public class GpxFileLoadTests
+public class GpxFileLoadAsyncTests
 {
     [Fact]
-    public void GpxVersion1_1_CompatibilityMode()
+    public async Task GpxVersion1_1_CompatibilityMode()
     {
         // Arrange
-        using var inStream = GpxTestUtilities.ReadFromEmbeddedResource(
+        await using var inStream = GpxTestUtilities.ReadFromEmbeddedResource(
             typeof(GpxFileLoadTests),"Test_Gpx1_1.gpx");
 
         // Act
-        var gpxFile = GpxFile.Load(inStream, GpxFileDeserializationMethod.Compatibility);
+        var gpxFile = await GpxFile.LoadAsync(inStream, GpxFileDeserializationMethod.Compatibility);
 
         // Assert
         Assert.NotNull(gpxFile);
@@ -26,14 +26,14 @@ public class GpxFileLoadTests
     }
 
     [Fact]
-    public void GpxVersion1_1_Gpx1_1Mode()
+    public async Task GpxVersion1_1_Gpx1_1Mode()
     {
         // Arrange
-        using var inStream = GpxTestUtilities.ReadFromEmbeddedResource(
+        await using var inStream = GpxTestUtilities.ReadFromEmbeddedResource(
             typeof(GpxFileLoadTests),"Test_Gpx1_1.gpx");
 
         // Act
-        var gpxFile = GpxFile.Load(inStream, GpxFileDeserializationMethod.OnlyGpx1_1);
+        var gpxFile = await GpxFile.LoadAsync(inStream, GpxFileDeserializationMethod.OnlyGpx1_1);
 
         // Assert
         Assert.NotNull(gpxFile);
@@ -45,14 +45,14 @@ public class GpxFileLoadTests
     }
 
     [Fact]
-    public void GpxVersion1_1_on_xml_1_1()
+    public async Task GpxVersion1_1_on_xml_1_1()
     {
         // Arrange
-        using var inStream = GpxTestUtilities.ReadFromEmbeddedResource(
+        await using var inStream = GpxTestUtilities.ReadFromEmbeddedResource(
             typeof(GpxFileLoadTests),"Test_Gpx1_1_on_xml_1_1.gpx");
 
         // Act
-        var gpxFile = GpxFile.Load(inStream, GpxFileDeserializationMethod.Compatibility);
+        var gpxFile = await GpxFile.LoadAsync(inStream, GpxFileDeserializationMethod.Compatibility);
 
         // Assert
         Assert.NotNull(gpxFile);
@@ -64,14 +64,14 @@ public class GpxFileLoadTests
     }
 
     [Fact]
-    public void GpxVersion1_0()
+    public async Task GpxVersion1_0()
     {
         // Arrange
-        using var inStream = GpxTestUtilities.ReadFromEmbeddedResource(
+        await using var inStream = GpxTestUtilities.ReadFromEmbeddedResource(
             typeof(GpxFileLoadTests),"Test_Gpx1_0.gpx");
 
         // Act
-        var gpxFile = GpxFile.Load(inStream, GpxFileDeserializationMethod.Compatibility);
+        var gpxFile = await GpxFile.LoadAsync(inStream, GpxFileDeserializationMethod.Compatibility);
 
         // Assert
         Assert.NotNull(gpxFile);
@@ -83,18 +83,18 @@ public class GpxFileLoadTests
     }
 
     [Fact]
-    public void GpxVersion1_0_SaveAs1_1()
+    public async Task GpxVersion1_0_SaveAs1_1()
     {
         // Arrange
-        using var inStream = GpxTestUtilities.ReadFromEmbeddedResource(
+        await using var inStream = GpxTestUtilities.ReadFromEmbeddedResource(
             typeof(GpxFileLoadTests),"Test_Gpx1_0.gpx");
 
         // Act
-        var gpxFile = GpxFile.Load(inStream, GpxFileDeserializationMethod.Compatibility);
+        var gpxFile = await GpxFile.LoadAsync(inStream, GpxFileDeserializationMethod.Compatibility);
         var outStrBuilder = new StringBuilder(33000);
         using (var strWriter = new StringWriter(outStrBuilder))
         {
-            GpxFile.Save(gpxFile, strWriter);
+            await GpxFile.SaveAsync(gpxFile, strWriter);
         }
         var writtenFile = outStrBuilder.ToString();
 
