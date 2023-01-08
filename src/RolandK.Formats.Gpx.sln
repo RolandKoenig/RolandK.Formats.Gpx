@@ -5,12 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RolandK.Formats.Gpx", "RolandK.Formats.Gpx\RolandK.Formats.Gpx.csproj", "{B7A3192D-8188-474B-BD6A-7CF2CCA9EE66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RolandK.Formats.Gpx.Tests", "RolandK.Formats.Gpx.Tests\RolandK.Formats.Gpx.Tests.csproj", "{14F0452B-16DB-4D83-A7E4-AF4ACE677FAD}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{256BB60A-9E70-4B46-B72E-871A3C68C490}"
-	ProjectSection(SolutionItems) = preProject
-		Directory.Build.props = Directory.Build.props
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RolandK.Formats.Gpx.Tests", "RolandK.Formats.Gpx.Tests\RolandK.Formats.Gpx.Tests.csproj", "{14F0452B-16DB-4D83-A7E4-AF4ACE677FAD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

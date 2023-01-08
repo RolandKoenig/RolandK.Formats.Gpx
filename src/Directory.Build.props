@@ -1,4 +1,12 @@
 <Project>
+
+    <!-- Version -->
+    <PropertyGroup>
+        <Version>1.0.0</Version>
+        <PackageVersion>1.0.0</PackageVersion>
+    </PropertyGroup>
+
+    <!-- Nuget -->
     <PropertyGroup>
         <Authors>Roland König</Authors>
         <Company>Roland König</Company>
@@ -8,24 +16,27 @@
         <RepositoryUrl>https://github.com/RolandKoenig/RolandK.Formats.Gpx</RepositoryUrl>
         <RepositoryType>Git</RepositoryType>
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-        <Version>1.0.0</Version>
-        <PackageVersion>1.0.0</PackageVersion>
         <Product>RolandK.Formats.Gpx</Product>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-        <PackageReleaseNotes>
-        https://github.com/RolandKoenig/RolandK.Formats.Gpx/releases
-    </PackageReleaseNotes>
-        <LangVersion>10.0</LangVersion>
+        <PackageReleaseNotes>https://github.com/RolandKoenig/RolandK.Formats.Gpx/releases</PackageReleaseNotes>
     </PropertyGroup>
 
+    <!-- Package logo -->
+    <!-- Package icon -->
+    <PropertyGroup>
+        <PackageIcon>Logo_128.png</PackageIcon>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="$(SolutionDir)../assets/Logo_128.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+    <!-- Commn configuration-->
     <PropertyGroup>
         <Nullable>enable</Nullable>
-    </PropertyGroup>
-
-    <!-- Treat warnings as erros -->
-    <PropertyGroup>
+        <LangVersion>10.0</LangVersion>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <WarningsAsErrors />
         <NoWarn>1701,1702,1591</NoWarn>
     </PropertyGroup>
+
 </Project>
