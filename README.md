@@ -15,9 +15,9 @@ on the System.Xml.Serialization.XmlSerializer class and therefore available for 
 [![Continuous integration](https://github.com/RolandKoenig/RolandK.Formats.Gpx/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/RolandKoenig/RolandK.Formats.Gpx/actions/workflows/continuous-integration.yml)
 
 ## Nuget
-| Package             | Downloads
-|---------------------|---------------------------------------------------------------------------------------------------------------------|
-| RolandK.Formats.Gpx | [![Nuget](https://img.shields.io/nuget/dt/RolandK.Formats.Gpx)](https://www.nuget.org/packages/RolandK.Formats.Gpx) |
+| Package             | Link                                               |
+|---------------------|----------------------------------------------------|
+| RolandK.Formats.Gpx | https://www.nuget.org/packages/RolandK.Formats.Gpx |
 
 ## Samples
 ### Load GPX file
