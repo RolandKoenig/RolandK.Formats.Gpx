@@ -1,2 +1,2 @@
-dotnet build -c Release "../src/RolandK.Formats.Gpx.sln"
-dotnet test -c Release "../src/RolandK.Formats.Gpx.sln"
+dotnet build -c Release "../RolandK.Formats.Gpx.sln"
+dotnet test -c Release "../RolandK.Formats.Gpx.sln"

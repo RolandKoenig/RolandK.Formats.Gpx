@@ -1,8 +1,8 @@
 # Cleanup solution
-dotnet clean "../src/RolandK.Formats.Gpx.sln"
+dotnet clean "../RolandK.Formats.Gpx.sln"
 
 # Delete all bin and obj directories
-$directories = Get-ChildItem "../src/" -include bin,obj -Recurse
+$directories = Get-ChildItem "../" -include bin,obj -Recurse
 foreach ($actDirectory in $directories)
 {
 	"Deleting $actDirectory"
